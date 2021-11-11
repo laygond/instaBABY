@@ -9,11 +9,22 @@ mkvirtualenv INSTAPY -p python3  # (OPTIONAL)
 pip install instapy
 '''
 
-## Run Simulation 
+## Run Quickstart Simulation 
 '''
 workon INSTAPY      # Turn on virtual env (OPTIONAL)
-python start.py 
+python quickstart.py 
 '''
+
+## Run Special Cases
+To run `python comment_post_continously.py` you will have to add a line of code to the instapy library in the `comment_util.py` file under the function `process_comments` right after :
+'''
+commented_image, message = verify_commented_image(browser, link, owner, logger)
+
+# LAYGOND ## ADDED FOR MULTIPLE COMMENTS
+commented_image = None
+'''
+This allows an already commented post to be commented again.
+
 
 ## Resources
 [Check for changes to InstaPy here](https://github.com/timgrossmann/InstaPy/blob/master/CHANGELOG.md#breaking-changes)

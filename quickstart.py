@@ -1,11 +1,10 @@
 # imports
 from instapy import InstaPy
 from instapy import smart_run
-import insta_config as config   # Create your own config file
 
 # login credentials
-insta_username = config.USERNAME
-insta_password = config.PASSWORD
+insta_username = 'caic.espol'
+insta_password = 'CAIC_2015'
 
 comments = ['Nice shot! @{}',
         'I love your profile! @{}',
@@ -30,7 +29,7 @@ with smart_run(session):
   session.set_dont_include(["friend1", "friend2", "friend3"])		
   
   # activity		
-  session.like_by_tags(["natgeo"], amount=10)
+  session.like_by_tags(["malabares"], amount=10)
 
   # Joining Engagement Pods
   session.set_do_comment(enabled=True, percentage=35)

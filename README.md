@@ -16,12 +16,16 @@ python quickstart.py
 '''
 
 ## Run Special Cases
-To run `python comment_post_continously.py` you will have to add a line of code to the instapy library in the `comment_util.py` file under the function `process_comments` right after :
+### `python comment_post_continously.py` 
+To run this file you will have to first add a line of code to instapy itself.
+Go inside the library to `comment_util.py` and under the function
+'process_comments' right after :
 '''
 commented_image, message = verify_commented_image(browser, link, owner, logger)
-
-# LAYGOND ## ADDED FOR MULTIPLE COMMENTS
-commented_image = None
+'''
+add:
+'''
+commented_image = None   # ADDED FOR MULTIPLE COMMENTS
 '''
 This allows an already commented post to be commented again.
 

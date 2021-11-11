@@ -8,6 +8,15 @@
 # three of my followers on each comment to increase my chances
 # of winning a price.
 #
+# NOTE:
+# To run this file you will have to first add a line of code to instapy.
+# Go inside the library to `comment_util.py` and under the function
+# 'process_comments' right after :
+#   commented_image, message = verify_commented_image(browser, link, owner, logger)
+# add:
+#   commented_image = None   # ADDED FOR MULTIPLE COMMENTS
+# This allows an already commented post to be commented again.
+#
 # Author: Bryan Laygond
 # Website: http://www.laygond.com
 # ------------------------------
